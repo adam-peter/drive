@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { ChevronRight, Upload } from "lucide-react";
-import { useMemo, useState } from "react";
-import { Button } from "~/components/ui/button";
-import { mockFiles, mockFolders } from "../lib/mock-data";
-import { FileRow, FolderRow } from "./file-row";
+import { ChevronRight, Upload } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { Button } from '~/components/ui/button';
+import { mockFiles, mockFolders } from '../lib/mock-data';
+import { FileRow, FolderRow } from './file-row';
 
 export default function GoogleDriveClone() {
-  const [currentFolder, setCurrentFolder] = useState<string>("root");
+  const [currentFolder, setCurrentFolder] = useState<string>('root');
 
   const getCurrentFiles = () => {
     return mockFiles.filter((file) => file.parent === currentFolder);
@@ -25,11 +25,11 @@ export default function GoogleDriveClone() {
     const breadcrumbs = [];
     let currentId = currentFolder;
 
-    while (currentId !== "root") {
+    while (currentId !== 'root') {
       const folder = mockFolders.find((folder) => folder.id === currentId);
       if (folder) {
         breadcrumbs.unshift(folder);
-        currentId = folder.parent ?? "root";
+        currentId = folder.parent ?? 'root';
       } else {
         break;
       }
@@ -39,7 +39,7 @@ export default function GoogleDriveClone() {
   }, [currentFolder]);
 
   const handleUpload = () => {
-    alert("Upload functionality would be implemented here");
+    alert('Upload functionality would be implemented here');
   };
 
   return (
@@ -48,7 +48,7 @@ export default function GoogleDriveClone() {
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center">
             <Button
-              onClick={() => setCurrentFolder("root")}
+              onClick={() => setCurrentFolder('root')}
               variant="ghost"
               className="mr-2 text-gray-300 hover:text-white"
             >

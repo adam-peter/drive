@@ -1,12 +1,12 @@
-import { type Config } from "drizzle-kit";
+import { type Config } from 'drizzle-kit';
 
-import { env } from "~/env";
+import { env } from '~/env';
 
 export default {
-  schema: "./src/server/db/schema.ts",
+  schema: './src/server/db/schema.ts',
   dialect: 'singlestore',
   dbCredentials: {
     url: env.DATABASE_URL,
   },
-  tablesFilter: ["drive-dreamy_*"],
+  // tablesFilter: ['drive-dreamy_*'],
 } satisfies Config;

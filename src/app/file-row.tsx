@@ -1,5 +1,5 @@
-import { FileIcon, Folder as FolderIcon } from "lucide-react";
-import type { File, Folder } from "~/lib/mock-data";
+import { FileIcon, Folder as FolderIcon } from 'lucide-react';
+import type { File, Folder } from '~/lib/mock-data';
 
 export function FileRow(props: { file: File }) {
   const { file } = props;
@@ -20,7 +20,7 @@ export function FileRow(props: { file: File }) {
             {file.name}
           </a>
         </div>
-        <div className="col-span-3 text-gray-400">{"file"}</div>
+        <div className="col-span-3 text-gray-400">{'file'}</div>
         <div className="col-span-3 text-gray-400">{file.size}</div>
       </div>
     </li>
