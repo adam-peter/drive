@@ -5,5 +5,3 @@
 - [ ] Move folder open state to URL
 - [ ] Add auth
 - [ ] Add file uploading
-
-## Note from 6th Aug 2025
