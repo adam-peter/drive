@@ -13,5 +13,3 @@ Just finished up connecting database, next steps:
 - [ ] Manually insert examples
 - [ ] Render them in the UI
 - [ ] Push and make sure it all works
-
-https://youtu.be/c-hKSbzooAg?t=4453
